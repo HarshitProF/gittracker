@@ -4,7 +4,7 @@
 ## Last Date of Modification: 19.04.2023
 
 ## importing the desired Packages
-import cv2 as cv
+#import cv2 as cv
 import sys
 from PIL import Image, ImageFont, ImageDraw
 from PIL.ImageEnhance import Sharpness,Brightness,Color,Contrast
