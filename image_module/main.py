@@ -218,7 +218,7 @@ class MODIFICATION:
 
     def WriteOnImage_type_b(self, show_image:bool=False, save_image:bool=True):
         ## Perpetual
-        font = ImageFont.truetype("DIN_Medium.ttf", 21)
+        font = ImageFont.truetype("fonts/DIN_Medium.ttf", 21)
         draw = ImageDraw.Draw(self.img)
         draw.text((278,128), self.Perpetual, (255,255,255), font=font)
 
