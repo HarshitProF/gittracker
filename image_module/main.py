@@ -68,7 +68,7 @@ class MODIFICATION:
             p=0
         print(p)
         ## The Title
-        font = ImageFont.truetype("IBMPlexArabic-Medium.ttf", self.font_per)
+        font = ImageFont.truetype("fonts/IBMPlexArabic-Medium.ttf", self.font_per)
         draw = ImageDraw.Draw(self.img)
         draw.text((110,30), self.Perpetual, (255,255,255), font=font)
 
@@ -86,10 +86,10 @@ class MODIFICATION:
         self.img.paste(Perpetual_mask,per_mask_position)
 
         ## Unrealized PNL & ROE
-        font_2 = ImageFont.truetype("DIN_Medium.ttf", 56) ## after many experiments we got that 56 is an ideal Font size 
+        font_2 = ImageFont.truetype("fonts/DIN_Medium.ttf", 56) ## after many experiments we got that 56 is an ideal Font size 
         draw = ImageDraw.Draw(self.img)
         draw.text((46,200), self.Unrealized_PNL, (45,188,132), font=font_2) ## green color with specific location ==> Unrealized PNL
-        font_3 = ImageFont.truetype("DIN_Bold.ttf", 56)
+        font_3 = ImageFont.truetype("fonts/DIN_Bold.ttf", 56)
         draw = ImageDraw.Draw(self.img)
         #788
         print(len(self.ROE))
@@ -103,7 +103,7 @@ class MODIFICATION:
        
 
         ## Size & Margin
-        font_4 = ImageFont.truetype("DIN_Medium.ttf", 40)
+        font_4 = ImageFont.truetype("fonts/DIN_Medium.ttf", 40)
         draw = ImageDraw.Draw(self.img)
         draw.text((43,340), self.Size, (255,255,255), font=font_4)
         draw.text((403,340), self.Margin, (255,255,255), font=font_4)
@@ -113,12 +113,12 @@ class MODIFICATION:
             rp=(len(self.Risk)-3)*3
         else:
             rp=(len(self.Risk)-3)*3
-        font_5 = ImageFont.truetype("DIN_Medium.ttf", 39)
+        font_5 = ImageFont.truetype("fonts/DIN_Medium.ttf", 39)
         draw = ImageDraw.Draw(self.img)
         draw.text((930-rp,340), f"{self.Risk}%", (45,188,132), font=font_5) 
 
         ## Entry Price & Mark Price
-        font_6 = ImageFont.truetype("DIN_Medium.ttf", 40)
+        font_6 = ImageFont.truetype("fonts/DIN_Medium.ttf", 40)
         draw = ImageDraw.Draw(self.img)
         draw.text((43,466), self.Entry_Price, (255,255,255), font=font_6)
         draw.text((403,466), self.Mark_Price, (255,255,255), font=font_6)
@@ -129,7 +129,7 @@ class MODIFICATION:
         else:
             qt=0
         print(qt)
-        font_7 = ImageFont.truetype("DIN_Bold.ttf", 33)
+        font_7 = ImageFont.truetype("fonts/DIN_Bold.ttf", 33)
         draw = ImageDraw.Draw(self.img)
         draw.text((939-qt,466), self.Liq_Price, (255,255,255), font=font_7)
         
@@ -139,7 +139,7 @@ class MODIFICATION:
             self.TP = str(input("Enter TP : "))
             self.SL = str(input("Enter SL : "))
 
-            font_8 = ImageFont.truetype("DIN_Medium.ttf", 39)
+            font_8 = ImageFont.truetype("fonts/DIN_Medium.ttf", 39)
             draw = ImageDraw.Draw(self.img)
             draw.text((170,550), f"{self.TP} / {self.SL}", (255,255,255), font=font_8)
 
@@ -197,7 +197,7 @@ class MODIFICATION:
                 self.img.paste(ex,Position_4)
         ## Cross
         #550
-        font_ = ImageFont.truetype("IBMPlexArabic-Medium.ttf", 35)
+        font_ = ImageFont.truetype("fonts/IBMPlexArabic-Medium.ttf", 35)
         draw.text((550+t,40), self.cross, (136,142,154), font=font_)
 
         #Enhance Sharpness
