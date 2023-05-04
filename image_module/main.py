@@ -223,7 +223,7 @@ class MODIFICATION:
         draw.text((278,128), self.Perpetual, (255,255,255), font=font)
 
         ## cross Value
-        font = ImageFont.truetype("DIN_Medium.ttf", 22)
+        font = ImageFont.truetype("fonts/DIN_Medium.ttf", 22)
         draw = ImageDraw.Draw(self.img)
         draw.text((212,127), self.Cross, (255,255,255), font=font)
         perpentual_2=Image.open('saved/perpentual_2.jpg')
@@ -236,15 +236,15 @@ class MODIFICATION:
 
         ## Situation
         if self.Situation == "LONG":
-            font = ImageFont.truetype("IBMPlexArabic-Medium.ttf", 22)
+            font = ImageFont.truetype("fonts/IBMPlexArabic-Medium.ttf", 22)
             draw = ImageDraw.Draw(self.img)
             draw.text((102,120), self.Situation, (45,188,132), font=font)
         elif self.Situation == "SHORT":
-            font = ImageFont.truetype("IBMPlexArabic-Medium.ttf", 22)
+            font = ImageFont.truetype("fonts/IBMPlexArabic-Medium.ttf", 22)
             draw = ImageDraw.Draw(self.img)
             draw.text((102,120), self.Situation, (178,45,78), font=font)
         else:
-            font = ImageFont.truetype("IBMPlexArabic-Medium.ttf", 22)
+            font = ImageFont.truetype("fonts/IBMPlexArabic-Medium.ttf", 22)
             draw = ImageDraw.Draw(self.img)
             draw.text((102,120), self.Situation, (45,188,132), font=font)
 
@@ -254,7 +254,7 @@ class MODIFICATION:
         draw = ImageDraw.Draw(self.img)
         draw.text((98,152), f"+ {self.percentage}%", (45,188,132), font=font)
 
-        font = ImageFont.truetype("DIN_Medium.ttf", 34)
+        font = ImageFont.truetype("fonts/DIN_Medium.ttf", 34)
         draw = ImageDraw.Draw(self.img)
         ## Last Price
         draw.text((298,356), self.last_price, (235,180,35), font=font)
@@ -262,7 +262,7 @@ class MODIFICATION:
         draw.text((298,294), self.entry_price, (235,180,35), font=font)
 
         ## referral Code
-        font = ImageFont.truetype("DIN_Medium.ttf", 42)
+        font = ImageFont.truetype("fonts/DIN_Medium.ttf", 42)
         draw = ImageDraw.Draw(self.img)
         draw.text((198,442), self.referral_code, (255, 255, 255), font=font)
 
