@@ -11,7 +11,7 @@ def hanlde_data(message:Message,bot):
     print(data)
     image=gen.Generator(Perpetual=data[0],entry_price=data[1],exit_price=data[2],Margin_usdt=data[3],type_trade=data[4],cross=float(data[5])).profit_card()
     bot.send_photo(message.from_user.id , photo=image)
-    info_img=gen.Generator(Perpetual=data[0],entry_price=float(data[1]),exit_price=float(data[2]),Margin_usdt=float(data[3]),type_trade=data[4],cross=float(data[5])).info_card()
+    info_img=gen.Generator(Perpetual=data[0],entry_price=data[1],exit_price=data[2],Margin_usdt=data[3],type_trade=data[4],cross=float(data[5])).info_card()
     bot.send_photo(message.from_user.id,photo=info_img)
 def web(message:Message,bot:TeleBot):
     web_app=WebAppInfo(url="https://harshitprof.github.io/Html2")
