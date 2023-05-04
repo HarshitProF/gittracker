@@ -16,11 +16,11 @@ class Generator :
         self.Unrealized_PNL=str(round(float(self.Margin_usdt)*float(self.ROI)*0.01,2))
     def profit_card(self):
         if int(float(self.ROI))<50:
-            img_path="saved/Type_A_without_perpentual.JPG"
+            img_path="saved/Type_A_without_perpentual.jpg"
         elif int(float(self.ROI))>50 and int(float(self.ROI))<100:
-            img_path="saved/Type_D_without_perpentual.JPG"
+            img_path="saved/Type_D_without_perpentual.jpg"
         else :
-            img_path="saved/Type_B_without_perpentual.JPG"
+            img_path="saved/Type_B_without_perpentual.jpg"
         if self.type=="Long":
             situation="LONG"
         else:

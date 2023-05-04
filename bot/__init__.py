@@ -1,4 +1,4 @@
 from telebot import TeleBot
 import os
-apikey="1649598540:AAGJbht8TziZBKozZFvMLzCxkZJSd52rtqA"
+apikey=os.getenv('TOKEN')
 bot=TeleBot(apikey)
