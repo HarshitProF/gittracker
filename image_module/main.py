@@ -86,10 +86,10 @@ class MODIFICATION:
         self.img.paste(Perpetual_mask,per_mask_position)
 
         ## Unrealized PNL & ROE
-        font_2 = ImageFont.truetype("DIN Medium.ttf", 56) ## after many experiments we got that 56 is an ideal Font size 
+        font_2 = ImageFont.truetype("DIN_Medium.ttf", 56) ## after many experiments we got that 56 is an ideal Font size 
         draw = ImageDraw.Draw(self.img)
         draw.text((46,200), self.Unrealized_PNL, (45,188,132), font=font_2) ## green color with specific location ==> Unrealized PNL
-        font_3 = ImageFont.truetype("DIN Bold.ttf", 56)
+        font_3 = ImageFont.truetype("DIN_Bold.ttf", 56)
         draw = ImageDraw.Draw(self.img)
         #788
         print(len(self.ROE))
@@ -103,7 +103,7 @@ class MODIFICATION:
        
 
         ## Size & Margin
-        font_4 = ImageFont.truetype("DIN Medium.ttf", 40)
+        font_4 = ImageFont.truetype("DIN_Medium.ttf", 40)
         draw = ImageDraw.Draw(self.img)
         draw.text((43,340), self.Size, (255,255,255), font=font_4)
         draw.text((403,340), self.Margin, (255,255,255), font=font_4)
@@ -113,12 +113,12 @@ class MODIFICATION:
             rp=(len(self.Risk)-3)*3
         else:
             rp=(len(self.Risk)-3)*3
-        font_5 = ImageFont.truetype("DIN Medium.ttf", 39)
+        font_5 = ImageFont.truetype("DIN_Medium.ttf", 39)
         draw = ImageDraw.Draw(self.img)
         draw.text((930-rp,340), f"{self.Risk}%", (45,188,132), font=font_5) 
 
         ## Entry Price & Mark Price
-        font_6 = ImageFont.truetype("DIN Medium.ttf", 40)
+        font_6 = ImageFont.truetype("DIN_Medium.ttf", 40)
         draw = ImageDraw.Draw(self.img)
         draw.text((43,466), self.Entry_Price, (255,255,255), font=font_6)
         draw.text((403,466), self.Mark_Price, (255,255,255), font=font_6)
@@ -129,7 +129,7 @@ class MODIFICATION:
         else:
             qt=0
         print(qt)
-        font_7 = ImageFont.truetype("DIN Bold.ttf", 33)
+        font_7 = ImageFont.truetype("DIN_Bold.ttf", 33)
         draw = ImageDraw.Draw(self.img)
         draw.text((939-qt,466), self.Liq_Price, (255,255,255), font=font_7)
         
@@ -139,7 +139,7 @@ class MODIFICATION:
             self.TP = str(input("Enter TP : "))
             self.SL = str(input("Enter SL : "))
 
-            font_8 = ImageFont.truetype("DIN Medium.ttf", 39)
+            font_8 = ImageFont.truetype("DIN_Medium.ttf", 39)
             draw = ImageDraw.Draw(self.img)
             draw.text((170,550), f"{self.TP} / {self.SL}", (255,255,255), font=font_8)
 
@@ -218,12 +218,12 @@ class MODIFICATION:
 
     def WriteOnImage_type_b(self, show_image:bool=False, save_image:bool=True):
         ## Perpetual
-        font = ImageFont.truetype("DIN Medium.ttf", 21)
+        font = ImageFont.truetype("DIN_Medium.ttf", 21)
         draw = ImageDraw.Draw(self.img)
         draw.text((278,128), self.Perpetual, (255,255,255), font=font)
 
         ## cross Value
-        font = ImageFont.truetype("DIN Medium.ttf", 22)
+        font = ImageFont.truetype("DIN_Medium.ttf", 22)
         draw = ImageDraw.Draw(self.img)
         draw.text((212,127), self.Cross, (255,255,255), font=font)
         perpentual_2=Image.open('saved/perpentual_2.jpg')
@@ -250,11 +250,11 @@ class MODIFICATION:
 
         ## Percentage
         #84 
-        font = ImageFont.truetype("DIN BOLD.ttf", 80)
+        font = ImageFont.truetype("DIN_BOLD.ttf", 80)
         draw = ImageDraw.Draw(self.img)
         draw.text((98,152), f"+ {self.percentage}%", (45,188,132), font=font)
 
-        font = ImageFont.truetype("DIN Medium.ttf", 34)
+        font = ImageFont.truetype("DIN_Medium.ttf", 34)
         draw = ImageDraw.Draw(self.img)
         ## Last Price
         draw.text((298,356), self.last_price, (235,180,35), font=font)
@@ -262,7 +262,7 @@ class MODIFICATION:
         draw.text((298,294), self.entry_price, (235,180,35), font=font)
 
         ## referral Code
-        font = ImageFont.truetype("DIN Medium.ttf", 42)
+        font = ImageFont.truetype("DIN_Medium.ttf", 42)
         draw = ImageDraw.Draw(self.img)
         draw.text((198,442), self.referral_code, (255, 255, 255), font=font)
 
