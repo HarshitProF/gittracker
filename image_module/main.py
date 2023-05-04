@@ -250,7 +250,7 @@ class MODIFICATION:
 
         ## Percentage
         #84 
-        font = ImageFont.truetype("fonts/DIN_BOLD.ttf", 80)
+        font = ImageFont.truetype("fonts/DIN_Medium.ttf", 21)
         draw = ImageDraw.Draw(self.img)
         draw.text((98,152), f"+ {self.percentage}%", (45,188,132), font=font)
 
