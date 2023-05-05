@@ -152,10 +152,10 @@ class MODIFICATION:
                 print("You've forgotten to enter the Value :)")"""
 
             mask_position = (725,36)
-            Position_1 = (728+t,36)
-            Position_2 = (744+t,36)
-            Position_3 = (758+t,36)
-            Position_4 = (775+t,36)
+            Position_1 = (728+20+t,36)
+            Position_2 = (744+t+20,36)
+            Position_3 = (758+t+20,36)
+            Position_4 = (775+t+20,36)
 
             mask = Image.open('mask.jpg')
             self.img.paste(mask, mask_position)
@@ -198,7 +198,7 @@ class MODIFICATION:
         ## Cross
         #550
         font_ = ImageFont.truetype("fonts/IBMPlexArabic-Medium.ttf", 35)
-        draw.text((550+t,40), self.cross, (136,142,154), font=font_)
+        draw.text((560+t,40), self.cross, (136,142,154), font=font_)
 
         #Enhance Sharpness
         self.img=Sharpness(self.img).enhance(factor=1)
