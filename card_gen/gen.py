@@ -21,19 +21,15 @@ class Generator :
     def _round_up(self,decimals,number):
         place_number=str(number)[ : : -1].find(".")
         number=round(number,decimals)
-        if place_number==decimals:
-            print('equal to number')
-            return number
-        elif place_number>decimals :
-            print('less than decimal')
-            return number
-        else:
+        if decimals>place_number:
             print('greater than decimal')
             factor=decimals-place_number
             result_number=str(number)
             for i in range(factor):
                 result_number=result_number+"0"
             return result_number
+        else:
+            return number
     def profit_card(self):
         if int(float(self.ROI))<50:
             img_path="saved/Type_A_without_perpentual.jpg"
