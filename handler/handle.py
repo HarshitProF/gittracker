@@ -17,6 +17,9 @@ def hanlde_data(message:Message,bot):
         print(e)
         bot.send_message(message.from_user.id,text="Some error occured with binance api")
         return
+    if result.status_code !=200:
+        print("something went wrong")
+        return
     place=None
     for coin in result.json()['symbols']:
         if str(coin['symbol'])==str(data[0].strip()):
