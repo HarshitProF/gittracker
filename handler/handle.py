@@ -12,7 +12,7 @@ def hanlde_data(message:Message,bot):
     import requests
     import json
     try:
-        result=requests.get("https://fapi.binance.us/fapi/v1/exchangeInfo")
+        result=requests.get("https://fapi.binance.com/fapi/v1/exchangeInfo")
     except Exception as e:
         print(e)
         bot.send_message(message.from_user.id,text="Some error occured with binance api")
