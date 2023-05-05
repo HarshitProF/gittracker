@@ -45,7 +45,7 @@ class Generator :
         else:
             situation="SHORT"
         referral_code=str(randint(100000000,999999999))
-        image=main.MODIFICATION(cross=f'{self.cross}x',Perpetual=self.Perpetual,Situation=situation,percentage=self.ROI,Entry_Price=str(self._round_up(decimals=self.place,number=float(self.entry_price))),last_price=str(self._round_up(decimals=self.place,number=float(self.entry_price))),referral_code=referral_code,type="type_B",img=img_path).WriteOnImage_type_b()
+        image=main.MODIFICATION(cross=f'{self.cross}x',Perpetual=self.Perpetual,Situation=situation,percentage=self.ROI,Entry_Price=str(self._round_up(decimals=self.place,number=float(self.entry_price))),last_price=str(self._round_up(decimals=self.place,number=float(self.exit_price))),referral_code=referral_code,type="type_B",img=img_path).WriteOnImage_type_b()
         return image
     def info_card(self):
         mark1=mark2=mark3=mark4="raw"

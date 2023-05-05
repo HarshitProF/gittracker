@@ -110,9 +110,9 @@ class MODIFICATION:
 
         ## Risk
         if len(self.Risk)>=4:
-            rp=(len(self.Risk)-3)*3
+            rp=(len(self.Risk)-3)*4
         else:
-            rp=(len(self.Risk)-3)*3
+            rp=(len(self.Risk)-3)*4
         font_5 = ImageFont.truetype("fonts/DIN_Medium.ttf", 39)
         draw = ImageDraw.Draw(self.img)
         draw.text((930-rp,340), f"{self.Risk}%", (45,188,132), font=font_5) 
