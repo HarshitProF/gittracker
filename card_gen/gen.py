@@ -20,12 +20,13 @@ class Generator :
         self.Unrealized_PNL=str(round(float(self.Margin_usdt)*float(self.ROI)*0.01,2))
     def _round_up(self,decimals,number):
         place_number=str(number)[ : : -1].find(".")
+        number=round(number,decimals)
         if place_number==decimals:
             print('equal to number')
             return number
         elif place_number>decimals :
             print('less than decimal')
-            return round(number,decimals)
+            return number
         else:
             print('greater than decimal')
             factor=decimals-place_number
