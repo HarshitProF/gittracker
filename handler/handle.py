@@ -9,9 +9,25 @@ def hanlde_data(message:Message,bot):
     bot.send_message(message.from_user.id,text="hi")
     data=message.text.split("-")
     print(data)
-    image=gen.Generator(Perpetual=data[0],entry_price=data[1],exit_price=data[2],Margin_usdt=data[3],type_trade=data[4],cross=float(data[5])).profit_card()
+    import requests
+    import json
+    try:
+        result=requests.get("https://fapi.binance.com/fapi/v1/exchangeInfo")
+    except Exception as e:
+        print(e)
+        bot.send_message(message.from_user.id,text="Some error occured with binance api")
+        return
+    place=None
+    for coin in json.loads(result.text)['symbols']:
+        if str(coin['symbol'])==str(data[0].strip()):
+            place=coin['pricePrecision']
+    if not place:
+        bot.send_message(message.from_user.id,text="Perpetual not found")
+        return
+        
+    image=gen.Generator(Perpetual=data[0],place=place,entry_price=data[1],exit_price=data[2],Margin_usdt=data[3],type_trade=data[4],cross=float(data[5])).profit_card()
     bot.send_photo(message.from_user.id , photo=image)
-    info_img=gen.Generator(Perpetual=data[0],entry_price=data[1],exit_price=data[2],Margin_usdt=data[3],type_trade=data[4],cross=float(data[5])).info_card()
+    info_img=gen.Generator(Perpetual=data[0],place=place,entry_price=data[1],exit_price=data[2],Margin_usdt=data[3],type_trade=data[4],cross=float(data[5])).info_card()
     bot.send_photo(message.from_user.id,photo=info_img)
 def web(message:Message,bot:TeleBot):
     web_app=WebAppInfo(url="https://harshitprof.github.io/Html2")
