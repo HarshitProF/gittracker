@@ -68,6 +68,8 @@ class Generator :
             liq=str(round(float(self.entry_price)+float(self.entry_price)*randint(20,30)*0.01,2))
         risk=str(round(randint(2,7)+uniform(1.1,1.9),2))
         liq=self._round_up(number=float(liq),decimals=self.place)
+        if float(liq)< 0.001 :
+            liq="--"
 
 
         print(f"ROI-{self.ROI}")
