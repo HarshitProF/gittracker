@@ -1,6 +1,6 @@
 services:
   app:
-    image: harshit831898/tracker1:4
+    image: harshit831898/tracker1:5
     ports:
       - 80:8000
     depends_on:
