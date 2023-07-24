@@ -1,0 +1,16 @@
+services:
+  app:
+    image: harshit831898/tracker1:3
+    ports:
+      - 80:8000
+    depends_on:
+      - mysql
+
+  mysql:
+    build: ./mysql/
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'freedb_Tracker'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
