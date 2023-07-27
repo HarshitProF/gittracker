@@ -13,4 +13,4 @@ services:
       MYSQL_DATABASE: 'freedb_Tracker'
       MYSQL_ROOT_PASSWORD: 'root'
     ports:
-      - '3306:33060'
+      - '3306:3306'
