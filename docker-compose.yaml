@@ -6,8 +6,6 @@ services:
       - 80:8000
     depends_on:
       - mysql
-    networks:
-      - net-1
 
   mysql:
     build: ./mysql/
@@ -19,13 +17,4 @@ services:
       MYSQL_PASSWORD: root
     ports:
       - '3306:3306'
-    volumes:
-      - vol-1:/var/lib/mysql
-    networks:
-      - net-1
-volumes:
-  vol-1:
-networks:
- net-1:
-   driver: bridge
     
