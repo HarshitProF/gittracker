@@ -38,11 +38,7 @@ CREATE TABLE `channels` (
 -- Dumping data for table `channels`
 --
 
-LOCK TABLES `channels` WRITE;
-/*!40000 ALTER TABLE `channels` DISABLE KEYS */;
-INSERT INTO `channels` VALUES (1,'crytpohub',-1934897423,'allowed',NULL),(3,'crytpohuhj',-19784897423,'allowed',NULL),(4,NULL,-1001984680552,'allowed',741728025);
-/*!40000 ALTER TABLE `channels` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `siganls`
@@ -70,12 +66,6 @@ CREATE TABLE `siganls` (
 -- Dumping data for table `siganls`
 --
 
-LOCK TABLES `siganls` WRITE;
-/*!40000 ALTER TABLE `siganls` DISABLE KEYS */;
-INSERT INTO `siganls` VALUES (49,488,4,'BNBUSDT',0.8739,25,3,'Long'),(50,496,4,'BNBUSDT',0.8739,25,3,'Long'),(51,508,4,'BNBUSDT',0.8739,25,3,'Long');
-/*!40000 ALTER TABLE `siganls` ENABLE KEYS */;
-UNLOCK TABLES;
-
 --
 -- Table structure for table `targets`
 --
@@ -98,13 +88,6 @@ CREATE TABLE `targets` (
 --
 -- Dumping data for table `targets`
 --
-
-LOCK TABLES `targets` WRITE;
-/*!40000 ALTER TABLE `targets` DISABLE KEYS */;
-INSERT INTO `targets` VALUES (245,49,309.88,NULL,'Target1'),(246,49,308.888,'done','Target2'),(247,49,305.898,'done','Target3'),(248,49,304.013,'done','Target4'),(249,49,303.026,'done','Target5'),(250,49,303.03,'done','Target6'),(251,50,309.88,NULL,'Target1'),(252,50,308.888,'done','Target2'),(253,50,305.898,'done','Target3'),(254,50,304.013,'done','Target4'),(255,50,303.026,'done','Target5'),(256,50,303.03,'done','Target6'),(257,51,309.88,NULL,'Target1'),(258,51,308.888,NULL,'Target2'),(259,51,305.898,'done','Target3'),(260,51,304.013,'done','Target4'),(261,51,303.026,'done','Target5'),(262,51,303.03,'done','Target6');
-/*!40000 ALTER TABLE `targets` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
