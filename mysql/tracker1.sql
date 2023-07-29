@@ -20,7 +20,7 @@ USE `freedb_Tracker`;
 --
 -- Table structure for table `channels`
 --
-
+DROP TABLE IF EXISTS `channels`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `channels` (
@@ -61,7 +61,6 @@ CREATE TABLE `siganls` (
   `place` int DEFAULT NULL,
   `type_trade` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`signal_id`),
-  UNIQUE KEY `post_id` (`post_id`),
   KEY `channel` (`channel`),
   CONSTRAINT `siganls_ibfk_1` FOREIGN KEY (`channel`) REFERENCES `channels` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
