@@ -1,3 +1,4 @@
+version: "1.0"
 services:
   app:
     image: harshit831898/tracker1:8
@@ -5,12 +6,26 @@ services:
       - 80:8000
     depends_on:
       - mysql
+    networks:
+      - net-1
 
   mysql:
     build: ./mysql/
     restart: always
     environment:
-      MYSQL_DATABASE: 'freedb_Tracker'
-      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: freedb_Tracker
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
     ports:
-      - '3306:33060'
+      - '3306:3306'
+    volumes:
+      - vol-1:var/lib/mysql
+    networks:
+      - net-1
+volumes:
+  vol-1:
+networks:
+ net-1:
+   driver: bridge
+    
