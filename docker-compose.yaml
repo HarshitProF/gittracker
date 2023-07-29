@@ -21,6 +21,8 @@ services:
       - '3306:3306'
     networks:
       - net-1
+    volumes:
+      - vol-1:/var/lib/mysql
 networks:
   net-1:
     driver: bridge
