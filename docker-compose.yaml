@@ -20,7 +20,7 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - vol-1:var/lib/mysql
+      - vol-1:/var/lib/mysql
     networks:
       - net-1
 volumes:
