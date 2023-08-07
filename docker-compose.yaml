@@ -1,7 +1,7 @@
 version: "1.7"
 services:
   app:
-    image: harshit831898/tracker1:25
+    image: harshit831898/tracker1:26
     ports:
       - 80:8000
     depends_on:
