@@ -13,10 +13,10 @@ services:
     build: ./mysql/
     restart: always
     environment:
-      - MYSQL_DATABASE=freedb_Tracker
-      - MYSQL_USER=Harshit
-      - MYSQL_PASSWORD=Harshit
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE="freedb_Tracker"
+      - MYSQL_USER="Harshit"
+      - MYSQL_PASSWORD="Harshit"
+      - MYSQL_ROOT_PASSWORD="root"
     ports:
       - '3306:3306'
     networks:
